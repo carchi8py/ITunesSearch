@@ -31,6 +31,28 @@ class ViewController: UIViewController {
                         do {
                             let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                             print("\(jsonData)")
+                            if let resultsArray = jsonData["results"] as? NSArray {
+                                var appDataArray = [AppData]()
+                                
+                                // interate over the array
+                                for item in resultsArray {
+                                    if let artworkURLString = item["artworkUrl60"] as? String {
+                                        print("artwork: \(artworkURLString)")
+                                        
+                                        if let artistName = item["artistName"] as? String {
+                                            print("artist: \(artistName)")
+                                            
+                                            if let appName = item["trackCensoredName"] as? String {
+                                                print("appName \(appName)")
+                                                
+                                                let appData = AppData(authorName: artistName, appName: appName, imageURLString: artworkURLString)
+                                                
+                                                appDataArray.append(appData)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         } catch {
                             print("There was an error")
                         }

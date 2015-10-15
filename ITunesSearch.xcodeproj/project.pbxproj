@@ -14,6 +14,7 @@
 		27B37AEA1BCE00500070DFBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B37AE81BCE00500070DFBF /* LaunchScreen.storyboard */; };
 		27B37AF51BCE00500070DFBF /* ITunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B37AF41BCE00500070DFBF /* ITunesSearchTests.swift */; };
 		27B37B001BCE00500070DFBF /* ITunesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B37AFF1BCE00500070DFBF /* ITunesSearchUITests.swift */; };
+		27B37B0E1BCF55B30070DFBF /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B37B0D1BCF55B30070DFBF /* AppData.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		27B37AFB1BCE00500070DFBF /* ITunesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITunesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B37AFF1BCE00500070DFBF /* ITunesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchUITests.swift; sourceTree = "<group>"; };
 		27B37B011BCE00500070DFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27B37B0D1BCF55B30070DFBF /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				27B37AE61BCE00500070DFBF /* Assets.xcassets */,
 				27B37AE81BCE00500070DFBF /* LaunchScreen.storyboard */,
 				27B37AEB1BCE00500070DFBF /* Info.plist */,
+				27B37B0D1BCF55B30070DFBF /* AppData.swift */,
 			);
 			path = ITunesSearch;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				27B37AE21BCE00500070DFBF /* ViewController.swift in Sources */,
 				27B37AE01BCE00500070DFBF /* AppDelegate.swift in Sources */,
+				27B37B0E1BCF55B30070DFBF /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
