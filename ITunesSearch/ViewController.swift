@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var appDataArray = [AppData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +54,18 @@ class ViewController: UIViewController {
                                         }
                                     }
                                 }
+                                
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    self.appDataArray = appDataArray
+                                    print("app data is complete")
+                                    print("\(self.appDataArray)")
+                                })
                             }
                         } catch {
                             print("There was an error")
                         }
                     }
+                    
                 })
                 task.resume()
             }
