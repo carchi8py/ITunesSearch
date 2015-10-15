@@ -26,7 +26,14 @@ class ViewController: UIViewController {
                     if error != nil {
                         print("Error \(error?.localizedDescription)")
                     } else {
-                        print("data: \(data)")
+                        //print("data: \(data)")
+                        
+                        do {
+                            let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                            print("\(jsonData)")
+                        } catch {
+                            print("There was an error")
+                        }
                     }
                 })
                 task.resume()
