@@ -38,18 +38,20 @@ class ViewController: UIViewController {
                                 
                                 // interate over the array
                                 for item in resultsArray {
-                                    if let artworkURLString = item["artworkUrl60"] as? String {
-                                        print("artwork: \(artworkURLString)")
+                                    if let item = item as? NSDictionary {
+                                        if let artworkURLString = item["artworkUrl60"] as? String {
+                                            print("artwork: \(artworkURLString)")
                                         
-                                        if let artistName = item["artistName"] as? String {
-                                            print("artist: \(artistName)")
+                                            if let artistName = item["artistName"] as? String {
+                                                print("artist: \(artistName)")
                                             
-                                            if let appName = item["trackCensoredName"] as? String {
-                                                print("appName \(appName)")
+                                                if let appName = item["trackCensoredName"] as? String {
+                                                    print("appName \(appName)")
                                                 
-                                                let appData = AppData(authorName: artistName, appName: appName, imageURLString: artworkURLString)
+                                                    let appData = AppData(authorName: artistName, appName: appName, imageURLString: artworkURLString, jsonData: item)
                                                 
-                                                appDataArray.append(appData)
+                                                    appDataArray.append(appData)
+                                                }
                                             }
                                         }
                                     }
