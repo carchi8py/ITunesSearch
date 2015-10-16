@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var searchTerm = "Paul Solt"
+        var searchTerm = "Games"
         if let escapedSearchTerm = searchTerm.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
             var searchString = "https://itunes.apple.com/search?term=\(escapedSearchTerm)&entity=software"
             print(searchString)
@@ -87,11 +87,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = UITableViewCell()
+        var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
         var appData = appDataArray[indexPath.row]
         
         cell.textLabel?.text = appData.appName
+        cell.detailTextLabel?.text = appData.authorName
         
         return cell
     }
