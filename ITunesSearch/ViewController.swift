@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var appDataArray = [AppData]()
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,6 +63,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                     self.appDataArray = appDataArray
                                     print("app data is complete")
                                     print("\(self.appDataArray)")
+                                    
+                                    self.tableView.reloadData()
                                 })
                             }
                         } catch {
@@ -84,14 +88,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = UITableViewCell()
-        cell.textLabel?.text = NSDate().description
+        
+        var appData = appDataArray[indexPath.row]
+        
+        cell.textLabel?.text = appData.appName
         
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return appDataArray.count
     }
 
 

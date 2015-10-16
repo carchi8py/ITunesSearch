@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H1I-IH-eqN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H1I-IH-eqN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <connections>
@@ -30,12 +30,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H1I-IH-eqN" secondAttribute="bottom" id="7Wd-cL-QLU"/>
-                            <constraint firstItem="H1I-IH-eqN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="9Hd-jL-7wd"/>
+                            <constraint firstItem="H1I-IH-eqN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="9Hd-jL-7wd"/>
                             <constraint firstItem="H1I-IH-eqN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="LYR-4K-NGi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="H1I-IH-eqN" secondAttribute="trailing" constant="-20" id="Z3P-0Q-0SG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JhJ-F4-fKD"/>
+                    <connections>
+                        <outlet property="tableView" destination="H1I-IH-eqN" id="Ajg-Gt-Lwr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
